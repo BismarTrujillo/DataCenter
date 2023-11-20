@@ -4,13 +4,13 @@ public class Course {
     private int crn;
     private String title;
     private int credits;
-    private static int base = 1000;
+    private static int crnBaseId = 1000;
 
     public Course(String subject, String title, int credits) {
         this.subject = subject;
         this.title = title;
         this.credits = credits;
-        crn = base++;
+        crn = crnBaseId++;
 
     }
 
