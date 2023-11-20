@@ -2,8 +2,8 @@ public abstract class User {
 
     private String firstName;
     private String lastName;
-    private String username;
-    private String password;
+    private String username; // IMPLEMENT UNIQUENESS
+    private String password; // IMPLEMENT UNIQUENESS
 
     public User(String firstName, String lastName, String username, String password) {
         this.firstName = firstName;
