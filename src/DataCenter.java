@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataCenter {
@@ -5,9 +6,10 @@ public class DataCenter {
     private List<Student> studentList;
     private List<Course> courseList;
 
-    public DataCenter(List<Student> studentList, List<Course> courseList) {
-        this.studentList = studentList;
-        this.courseList = courseList;
+    public DataCenter() {
+        this.studentList = new ArrayList<Student>();
+        this.courseList = new ArrayList<Course>();
+
     }
 
     public List<Student> getStudentList() {
@@ -29,6 +31,9 @@ public class DataCenter {
     public void addStudent(Student student) {
         studentList.add(student);
     }
+    public void addCourse(Course course) {
+        courseList.add(course);
+    }
 
     public boolean validLogin(String enteredUsername, String enteredPassword){
         for (Student student: studentList) {
@@ -38,7 +43,36 @@ public class DataCenter {
         }
         return false;
     }
-    public void addCourse(Course course) {
-        courseList.add(course);
+
+    public Student findStudentById(int studentId){
+        for (Student student: studentList) {
+            if (student.getStudentId() == studentId)
+                return student;
+        }
+        return null;
+    }
+
+    public List<Student> findStudentByName(String firstName, String lastName){
+        List<Student> resultList = new ArrayList<>();
+        for (Student student: studentList) {
+            if (student.getFirstName().equals(firstName) && student.getLastName().equals(lastName))
+                resultList.add(student);
+        }
+        return resultList;
+    }
+    public Course findCourseByCrn(int crn){
+        for (Course course: courseList) {
+            if (course.getCrn() == crn)
+                return course;
+        }
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return "DataCenter = " + '\n' +
+                "studentList: " + '\n' +
+                studentList + '\n' +
+                "courseList: " +'\n'+ courseList + '\n';
     }
 }

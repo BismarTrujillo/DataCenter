@@ -26,9 +26,9 @@ public class Course {
         return crn;
     }
 
-    private void setCrn(int crn) { //// IMPLEMENT UNIQUENESS
-        this.crn = crn;
-    }
+//    private void setCrn(int crn) {
+//        this.crn = crn;
+//    }
 
     public String getTitle() {
         return title;
@@ -49,10 +49,10 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course " +
-                "subject = '" + subject + '\'' +
-                ", crn = " + crn +
-                ", title = '" + title + '\'' +
-                ", credits = " + credits;
+        return '\n'+"    Course: " + '\n' +
+                "       subject = '" + subject + '\n' +
+                "       crn = " + crn + '\n'+
+                "       title = '" + title + '\n' +
+                "       credits = " + credits;
     }
 }

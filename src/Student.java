@@ -20,4 +20,36 @@ public class Student extends User {
         this.courses = courses;
         studentId = studentBaseId++;
     }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    }
+
+    @Override
+    public String toString() {
+        return "Student " + '\n'+
+                "   studentId = " + studentId + '\n' +
+                "   major = '" + major + '\n' +
+                "   courses = " + '\n' + courses;
+    }
 }
