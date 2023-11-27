@@ -4,7 +4,6 @@ public class Student extends User {
 
     private int studentId;
     private String major;
-
     private List<Course> courses; //SELECTED OR COMPLETED
     private static int studentBaseId = 1;
 

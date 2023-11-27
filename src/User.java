@@ -48,9 +48,9 @@ public abstract class User {
         return firstName + " " + lastName;
     }
 
-    public boolean validLogin(String enteredUsername, String enteredPassword){
-        return username.equals(enteredUsername) && password.equals(enteredPassword);
-    }
+//    public boolean validLogin(String enteredUsername, String enteredPassword){
+//        return username.equals(enteredUsername) && password.equals(enteredPassword);
+//    }
 
 
 }

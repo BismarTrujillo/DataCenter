@@ -38,7 +38,8 @@ public class Course {
         this.title = title;
     }
 
-    public int getCredits() {
+    public int getCredits()
+                    {
         return credits;
     }
 
