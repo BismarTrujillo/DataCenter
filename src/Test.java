@@ -21,7 +21,7 @@ public class Test {
 
         dc.findCourseByCrn(1000);
 
-        System.out.println(dc.getStudentList());
+        System.out.println();
 
     }
 }
