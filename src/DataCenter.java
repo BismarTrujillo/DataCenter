@@ -60,9 +60,17 @@ public class DataCenter {
         }
         return resultList;
     }
+
     public Course findCourseByCrn(int crn){
         for (Course course: courseList) {
             if (course.getCrn() == crn)
+                return course;
+        }
+        return null;
+    }
+    public Course findCourseBySubject(String subject){
+        for (Course course: courseList) {
+            if (course.getSubject().equals(subject))
                 return course;
         }
         return null;
