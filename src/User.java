@@ -2,8 +2,8 @@ public abstract class User {
 
     private String firstName;
     private String lastName;
-    private String username; // IMPLEMENT UNIQUENESS
-    private String password; // IMPLEMENT UNIQUENESS
+    private String username;
+    private String password;
 
     public User(String firstName, String lastName, String username, String password) {
         this.firstName = firstName;
@@ -48,9 +48,7 @@ public abstract class User {
         return firstName + " " + lastName;
     }
 
-//    public boolean validLogin(String enteredUsername, String enteredPassword){
-//        return username.equals(enteredUsername) && password.equals(enteredPassword);
-//    }
+
 
 
 }

@@ -1,15 +1,16 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Student extends User {
 
     private int studentId;
     private String major;
-    private List<Course> courses; //SELECTED OR COMPLETED
+    private List<Course> courses;
     private static int studentBaseId = 1;
 
-    public Student(String firstName, String lastName, String username, String password, List<Course> courses) {
+    public Student(String firstName, String lastName, String username, String password) {
         super(firstName, lastName, username, password);
-        this.courses = courses;
+        this.courses = new ArrayList<>();
         major = "Undefined";
         studentId = studentBaseId++;
     }
@@ -43,6 +44,9 @@ public class Student extends User {
 
     public void setCourses(List<Course> courses) {
         this.courses = courses;
+    }
+    public void enrollCourse(Course course) {
+        this.courses.add(course);
     }
 
     @Override

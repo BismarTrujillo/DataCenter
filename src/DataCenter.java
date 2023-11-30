@@ -29,7 +29,11 @@ public class DataCenter {
     }
 
     public void addStudent(Student student) {
-        studentList.add(student);
+        if(isUniqueUsername(student.getUsername())){
+            studentList.add(student);
+        }else {
+            System.out.println("Username is already taken");
+        }
     }
     public void addCourse(Course course) {
         courseList.add(course);
@@ -52,15 +56,6 @@ public class DataCenter {
         return null;
     }
 
-    public List<Student> findStudentByName(String firstName, String lastName){
-        List<Student> resultList = new ArrayList<>();
-        for (Student student: studentList) {
-            if (student.getFirstName().equals(firstName) && student.getLastName().equals(lastName))
-                resultList.add(student);
-        }
-        return resultList;
-    }
-
     public Course findCourseByCrn(int crn){
         for (Course course: courseList) {
             if (course.getCrn() == crn)
@@ -74,6 +69,14 @@ public class DataCenter {
                 return course;
         }
         return null;
+    }
+    private boolean isUniqueUsername(String enteredUsername){
+        for (Student student: studentList) {
+            if (student.getUsername().equals(enteredUsername)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
