@@ -3,8 +3,8 @@ import java.util.List;
 
 public class DataCenter {
 
-    private List<Student> studentList;
-    private List<Course> courseList;
+    private ArrayList<Student> studentList;
+    private ArrayList<Course> courseList;
 
     public DataCenter() {
         this.studentList = new ArrayList<Student>();
@@ -12,19 +12,19 @@ public class DataCenter {
 
     }
 
-    public List<Student> getStudentList() {
+    public ArrayList<Student> getStudentList() {
         return studentList;
     }
 
-    public void setStudentList(List<Student> studentList) {
+    public void setStudentList(ArrayList<Student> studentList) {
         this.studentList = studentList;
     }
 
-    public List<Course> getCourseList() {
+    public ArrayList<Course> getCourseList() {
         return courseList;
     }
 
-    public void setCourseList(List<Course> courseList) {
+    public void setCourseList(ArrayList<Course> courseList) {
         this.courseList = courseList;
     }
 

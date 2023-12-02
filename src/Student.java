@@ -1,21 +1,22 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Student extends User {
 
     private int studentId;
     private String major;
-    private List<Course> courses;
+    private ArrayList<Course> courses;
     private static int studentBaseId = 1;
 
     public Student(String firstName, String lastName, String username, String password) {
         super(firstName, lastName, username, password);
         this.courses = new ArrayList<>();
-        major = "Undefined";
+        major = "Undeclared";
         studentId = studentBaseId++;
     }
 
-    public Student(String firstName, String lastName, String username, String password, String major, List<Course> courses) {
+    public Student(String firstName, String lastName, String username, String password, String major, ArrayList<Course> courses) {
         super(firstName, lastName, username, password);
         this.major = major;
         this.courses = courses;
@@ -42,7 +43,7 @@ public class Student extends User {
         return courses;
     }
 
-    public void setCourses(List<Course> courses) {
+    public void setCourses(ArrayList<Course> courses) {
         this.courses = courses;
     }
     public void enrollCourse(Course course) {

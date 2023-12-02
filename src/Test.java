@@ -8,16 +8,13 @@ public class Test {
 
         //Creating and Adding Courses
         dc.addCourse(new Course("CSE148","OOP", 3));
-        dc.addCourse(new Course("PHI","philo", 1));
-        dc.addCourse(new Course("MAT","su madre", 3));
-        dc.addCourse(new Course("GOP","goppo", 1));
+        dc.addCourse(new Course("PHI","philchro", 1));
         dc.addCourse(new Course("PHY","physics", 2));
 
-
-
         dc.addStudent(new Student("qq","www","abd","password4"));
+
         //Register student
-        System.out.println("Registtring Student");
+        System.out.println("Registring Student");
         dc.addStudent(new Student("x","z","abc","password4","CSE", new ArrayList<Course>(){{
             add(dc.findCourseByCrn(1000));
             add(dc.findCourseByCrn(1001));

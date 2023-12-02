@@ -1,4 +1,4 @@
-public abstract class User {
+public class User {
 
     private String firstName;
     private String lastName;
@@ -47,8 +47,5 @@ public abstract class User {
     public String getFullName() {
         return firstName + " " + lastName;
     }
-
-
-
 
 }
