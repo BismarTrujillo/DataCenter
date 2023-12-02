@@ -26,9 +26,9 @@ public class Course {
         return crn;
     }
 
-//    private void setCrn(int crn) {
-//        this.crn = crn;
-//    }
+    private void setCrn(int crn) {
+        this.crn = crn;
+    }
 
     public String getTitle() {
         return title;
